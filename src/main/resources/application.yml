@@ -1,0 +1,27 @@
+server:
+  port: 1221
+  servlet:
+    encoding:
+      charset: UTF-8
+
+mybatis:
+  config-location: classpath:config/mybatis-config.xml
+
+spring:
+  config:
+    activate:
+      on-profile: "local"
+
+  datasource:
+    oracle:
+      driver-class-name: oracle.jdbc.driver.OracleDriver
+      jdbcUrl: jdbc:oracle:thin:@localhost:65022/xe
+      username: system
+      password: root
+
+    mariadb:
+      driver-class-name: org.mariadb.jdbc.Driver
+      jdbcUrl: jdbc:mariadb://localhost:3306/MYMSG
+      username: mymsg_cyb
+      password: q1w2e3r4T%
+
